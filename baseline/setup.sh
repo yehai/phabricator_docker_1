@@ -52,8 +52,17 @@ mkdir /srv/phabricator
 chown PHABRICATOR:wwwgrp-phabricator /srv/phabricator
 cd /srv/phabricator
 sudo -u PHABRICATOR git clone https://www.github.com/phacility/libphutil.git /srv/phabricator/libphutil
+cd libphutil
+git checkout -B stable origin/stable
+cd ..
 sudo -u PHABRICATOR git clone https://www.github.com/phacility/arcanist.git /srv/phabricator/arcanist
+cd arcanist
+git checkout -B stable origin/stable
+cd ..
 sudo -u PHABRICATOR git clone https://www.github.com/phacility/phabricator.git /srv/phabricator/phabricator
+cd phabricator
+git checkout -B stable origin/stable
+cd ..
 sudo -u PHABRICATOR git clone https://www.github.com/PHPOffice/PHPExcel.git /srv/phabricator/PHPExcel
 cd /
 
